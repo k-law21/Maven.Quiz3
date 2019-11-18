@@ -21,7 +21,14 @@ public class ArrayUtility<SomeType> {
     }
 
     public Integer getNumberOfOccurrences(SomeType valueToEvaluate) {
-        return null;
+        Integer count = 0;
+        for (SomeType x : array) {
+            if (x.equals(valueToEvaluate)) {
+                count++;
+            }
+
+        }
+        return count;
     }
 
     public SomeType[] filter(Function<SomeType, Boolean> predicate) {
